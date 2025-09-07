@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do & Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="todo.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">👩‍💻 MyPortfolio</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="todo.html" class="active">To-Do & Notes</a>
+      <a href="products.html">Products</a>
+    </nav>
+  </header>
+
+  <main class="grid two">
+    <!-- To-Do -->
+    <section class="card">
+      <h2>To-Do List</h2>
+
+      <form id="todoForm" class="form row">
+        <input type="text" id="todoInput" placeholder="Add a task..." required />
+        <button class="btn primary" type="submit">Add</button>
+      </form>
+
+      <div class="row wrap gap">
+        <select id="filterStatus" class="select">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+        </select>
+        <button id="clearCompleted" class="btn small">Clear Completed</button>
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+      <p class="muted" id="todoCount"></p>
+    </section>
+
+    <!-- Notes -->
+    <section class="card">
+      <h2>Notes</h2>
+
+      <form id="noteForm" class="form">
+        <label> Title
+          <input type="text" id="noteTitle" placeholder="Note title" required />
+        </label>
+        <label> Content
+          <textarea id="noteContent" rows="5" placeholder="Write your note..." required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Save Note</button>
+      </form>
+
+      <div class="notes-grid" id="notesGrid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+</body>
+</html>
