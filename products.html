@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="products.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">👩‍💻 MyPortfolio</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="todo.html">To-Do & Notes</a>
+      <a href="products.html" class="active">Products</a>
+    </nav>
+  </header>
+
+  <main class="products">
+    <aside class="filters card">
+      <h2>Filters</h2>
+
+      <label class="block"> Search
+        <input type="search" id="search" placeholder="Search products..." />
+      </label>
+
+      <fieldset>
+        <legend>Category</legend>
+        <label class="row between"><span>All</span> <input type="radio" name="cat" value="all" checked></label>
+        <label class="row between"><span>Electronics</span> <input type="radio" name="cat" value="electronics"></label>
+        <label class="row between"><span>Home</span> <input type="radio" name="cat" value="home"></label>
+        <label class="row between"><span>Fitness</span> <input type="radio" name="cat" value="fitness"></label>
+        <label class="row between"><span>Books</span> <input type="radio" name="cat" value="books"></label>
+      </fieldset>
+
+      <label class="block"> Max Price: <span id="priceVal"></span>
+        <input type="range" id="price" min="0" max="2000" value="2000" />
+      </label>
+
+      <label class="block"> Minimum Rating
+        <select id="rating" class="select">
+          <option value="0">All</option>
+          <option value="3">3★+</option>
+          <option value="4">4★+</option>
+          <option value="4.5">4.5★+</option>
+        </select>
+      </label>
+
+      <label class="block"> Sort By
+        <select id="sort" class="select">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name-asc">Name: A → Z</option>
+          <option value="name-desc">Name: Z → A</option>
+          <option value="rating-desc">Rating: High → Low</option>
+        </select>
+      </label>
+
+      <button id="resetFilters" class="btn small">Reset</button>
+    </aside>
+
+    <section class="catalog">
+      <h2>Products</h2>
+      <div id="productGrid" class="grid three"></div>
+      <p id="prodCount" class="muted"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+</body>
+</html>
