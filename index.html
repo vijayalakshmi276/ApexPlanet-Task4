@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="portfolio.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">👩‍💻 MyPortfolio</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav" class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="todo.html">To-Do & Notes</a>
+      <a href="products.html">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I’m <span class="accent">Your Name</span></h1>
+        <p>Frontend Developer • JavaScript • CSS • Responsive Design</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="todo.html">Try To-Do App</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
+    </section>
+
+    <section class="grid two" id="about">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I build clean, accessible, and responsive interfaces.
+          I enjoy JavaScript, UI polish, and performance.
+        </p>
+        <ul class="chips">
+          <li>HTML5</li><li>CSS3</li><li>JS (ES6+)</li><li>Accessibility</li><li>Git</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Highlights</h3>
+        <ul class="list">
+          <li>⭐ Built a reusable component library</li>
+          <li>⚡ Optimized a page from 6s → 1.2s LCP</li>
+          <li>🧪 Wrote UI tests that reduced bugs by 30%</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>To-Do & Notes</h3>
+          <p>LocalStorage CRUD app with filters.</p>
+          <a class="btn small" href="todo.html">Open</a>
+        </article>
+        <article class="card">
+          <h3>Product Listing</h3>
+          <p>Filter, sort, and search products client-side.</p>
+          <a class="btn small" href="products.html">Open</a>
+        </article>
+        <article class="card">
+          <h3>Portfolio</h3>
+          <p>Responsive, accessible multi-page layout.</p>
+          <a class="btn small" href="#contact">Contact</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form id="contactForm" class="form">
+        <div class="grid two">
+          <label> Name
+            <input type="text" name="name" required />
+          </label>
+          <label> Email
+            <input type="email" name="email" required />
+          </label>
+        </div>
+        <label> Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+        <p id="contactMsg" class="muted"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+</body>
+</html>
